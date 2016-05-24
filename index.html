@@ -19,15 +19,20 @@
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu_glauro" aria-expanded="true">
 						<i class="fa fa-bars" aria-hidden="true"></i>
 					</button>
-					<a class="navbar-brand" href="#">G.Q.J</a>
+					<a class="navbar-brand logo" href="#/sobre">
+						<h1>
+							<span>Glauro Quintão Juliani - Front End Developer</span>
+							<img src="app/images/sheep-48.png" alt="logo julianiwebdesigner" title="Glauro Quintão Juliani">
+						</h1>
+					</a>
 				</div>
 
 				<div class="collapse navbar-collapse" id="menu_glauro">
 					<ul class="nav navbar-nav navbar-right">
-						<li ng-class="{active: aba == '/'}"><a href="#/sobre">Sobre</a></li>
-						<li ng-class="{active: aba == '/ensino'}"><a href="#/ensino">Ensino</a></li>
-						<li ng-class="{active: aba == '/portfolio'}"><a href="#/portfolio">Portfolio</a></li>
-						<li ng-class="{active: aba == '/contato'}"><a href="#/contato">Contato</a></li>
+						<li id="sobre" ng-class="{active: aba == '/'}"><a href="#/sobre">Sobre</a></li>
+						<li id="ensino" ng-class="{active: aba == '/ensino'}"><a href="#/ensino">Ensino</a></li>
+						<li id="portfolio" ng-class="{active: aba == '/portfolio'}"><a href="#/portfolio">Portfolio</a></li>
+						<li id="contato" ng-class="{active: aba == '/contato'}"><a href="#/contato">Contato</a></li>
 					</ul>
 				</div>
 			</div>

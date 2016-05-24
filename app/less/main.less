@@ -5,34 +5,57 @@ body {
 	-webkit-transition: all 0.3s ease-in-out 0s;
 	-o-transition: all 0.3s ease-in-out 0s;
 	-ms-transition: all 0.3s ease-in-out 0s;
-}
 
-header {
-	text-align: center;
-	.navbar {
-		background-color: #323232;
-		border-bottom: 0px;
-		.navbar-header {
-			button {
-				i {
-					background-color: #ffffff;
-					font-size: 1.2em;
+	header {
+		text-align: center;
+		.logo {
+			position: relative;
+			h1 {
+				margin: 0;
+				position: absolute;
+				top: 0px;
+				span {
+					position: absolute;
+					color: transparent;
+					display: none;
 				}
 			}
 		}
-		a {
-			color: #ffffff;
-			transition: all 0.3s ease-in-out 0s;
-			-moz-transition: all 0.3s ease-in-out 0s;
-			-webkit-transition: all 0.3s ease-in-out 0s;
-			-o-transition: all 0.3s ease-in-out 0s;
-			-ms-transition: all 0.3s ease-in-out 0s;
-		}
-		.nav {
-			a:hover {
-				background-color: #ffffff;
-				color: #323232;
+		.navbar {
+			background-color: #2f2f2f;
+			border-bottom: 0px;
+			.navbar-header {
+				button {
+					i {
+						background-color: #ffffff;
+						font-size: 1.2em;
+					}
+				}
+			}
+			a {
+				color: #ffffff;
+				-webkit-border-top-left-radius: 10px;
+				-webkit-border-top-right-radius: 10px;
+				-moz-border-radius-topleft: 10px;
+				-moz-border-radius-topright: 10px;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				transition: all 0.3s ease-in-out 0s;
+				-moz-transition: all 0.3s ease-in-out 0s;
+				-webkit-transition: all 0.3s ease-in-out 0s;
+				-o-transition: all 0.3s ease-in-out 0s;
+				-ms-transition: all 0.3s ease-in-out 0s;
+			}
+			.nav {
+				a:focus {
+					color: @color-base;
+					background-color: #ffffff;
+				}
+				a:hover {
+					background-color: #ffffff;
+					color: #2f2f2f;
+				}
 			}
 		}
 	}
-}
+}//body

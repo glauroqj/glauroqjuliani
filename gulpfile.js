@@ -11,7 +11,7 @@ uglify = require('gulp-uglify');
 // Utiliza o 'gulp-less', busca tudo que está dentro da pasta less, compila e devolve na pasta 'css', o gulp.src é o caminho do less e o gulp.dest de saída do css.
 
 gulp.task('less', function () {
-  gulp.src('less/templates.less')
+  gulp.src('app/less/templates.less')
   .pipe(plumber())
   .pipe(less())
   .pipe(mincss())
@@ -19,24 +19,24 @@ gulp.task('less', function () {
     suffix:'.min',
     basename: 'main'
   }))
-  .pipe(gulp.dest('all'))
+  .pipe(gulp.dest('app/all'))
 });
 
 gulp.task('uglify', function () {
-  gulp.src('js/glauro.js')
+  gulp.src('app/js/glauro.js')
   .pipe(uglify())
   .pipe(rename({
     suffix:'.min',
     basename: 'main'
   }))
-  .pipe(gulp.dest('all'))
+  .pipe(gulp.dest('app/all'))
 });
 
 // Aqui a task watch fica observando por mudanças na pasta less, ou seja, toda vez que você salva algo no less ele já compila em css :)
 
 gulp.task('watch', function(){
-  gulp.watch('less/*.less', ['less']);
-  gulp.watch('js/glauro.js', ['uglify']);
+  gulp.watch('app/less/*.less', ['less']);
+  gulp.watch('app/js/glauro.js', ['uglify']);
 });
 
 gulp.task('default',  ['less', 'uglify', 'watch']);
