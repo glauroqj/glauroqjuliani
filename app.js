@@ -9,24 +9,24 @@ app.config(function($routeProvider, $locationProvider)
 
    // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
    .when('/', {
-      templateUrl : 'views/sobre.html',
+      templateUrl : 'app/views/sobre.html',
       controller     : 'SobreCtrl',
    })
 
    // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
    .when('/ensino', {
-      templateUrl : 'views/ensino.html',
+      templateUrl : 'app/views/ensino.html',
       controller  : 'EnsinoCtrl',
    })
 
    // para a rota '/contato', carregaremos o template contato.html e o controller 'ContatoCtrl'
    .when('/portfolio', {
-      templateUrl : 'views/portfolio.html',
+      templateUrl : 'app/views/portfolio.html',
       controller  : 'PortfolioCtrl',
    })
 
    .when('/contato', {
-      templateUrl : 'views/contato.html',
+      templateUrl : 'app/views/contato.html',
       controller  : 'ContatoCtrl',
    })
    // caso não seja nenhum desses, redirecione para a rota '/'
