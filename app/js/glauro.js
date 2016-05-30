@@ -1,6 +1,16 @@
-$(document).ready(function() {
-	
-	listar_sobre();
+$(document).ready(function() {	
+
+	$( document ).ajaxComplete(function() {
+		$('.overlay').hide();
+	});
+
+	$('.navbar-header button').click(function(event) {
+		$('#menu_glauro').toggleClass('collapse');
+
+		$('.nav li').click(function(event) {
+			$('#menu_glauro').toggleClass('collapse');
+		});
+	});
 
 	$('#sobre').click(function(event) {
 
@@ -8,21 +18,6 @@ $(document).ready(function() {
 
 	});
 
-	function listar_sobre(){
-		$.ajax({
-			url: 'http://localhost/glauroqjuliani/app/content/texto.json',
-			type: 'GET',
-			dataType: 'json',
-			success: function(json){
-				$.each(json, function(index, val) {
-					var txt = (val.id)
-					console.log(txt)
-				});
-            },//success
-            error: function(XMLHttpRequest, textStatus, errorThrown){
-            	alert('Erro!');
-    		}//error
-    	});
-	}
+
 
 });//end document

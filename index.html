@@ -14,11 +14,12 @@
 </head>
 
 <body>
+	<div class="overlay"><div class="loading">Carregando...</div></div> <!-- overlay -->
 	<header>
-		<nav class="navbar navbar-reverse navbar-fixed-top">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu_glauro" aria-expanded="true">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu_glauro" aria-expanded="false" aria-controls="menu_glauro">
 						<i class="fa fa-bars" aria-hidden="true"></i>
 					</button>
 					<a class="navbar-brand logo" href="#/sobre">
@@ -29,7 +30,7 @@
 					</a>
 				</div>
 
-				<div class="collapse navbar-collapse" id="menu_glauro">
+				<div id="menu_glauro" class="navbar-collapse collapse" aria-expanded="false">
 					<ul class="nav navbar-nav navbar-right">
 						<li id="sobre" ng-class="{active: aba == '/'}"><a href="#/sobre">Sobre</a></li>
 						<li id="ensino" ng-class="{active: aba == '/ensino'}"><a href="#/ensino">Ensino</a></li>
@@ -41,13 +42,12 @@
 		</nav>
 	</header><!-- /header -->
 
-	<div class="container">
-		<div ng-view></div>	
-	</div>
 
-	<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	<div ng-view></div>	
+
+	<script src="app/libs/jquery-2.1.3.min.js"></script>
+	<script src="app/libs/angular.min.js"></script>
+	<script src="app/libs/angular-route.min.js"></script>
 	<script type="app/all/bootstrap.min.js"></script>
 	<script src="app/all/main.min.js"></script>
 
@@ -56,6 +56,30 @@
 
 	<script>
 
+		function listar_sobre(){
+			$('.overlay').show();
+			$.ajax({
+				url: 'http://glauroqjuliani.com.br/new/glauroqjuliani/app/content/texto.json',
+				type: 'GET',
+				dataType: 'json',
+				success: function(json){
+					$.each(json, function(index, val) {
+						$(val).each(function(index, val) {
+							var inicial = (val.h2)
+							var apresentacao = (val.h3)
+							var desafio = (val.desafio)
+							
+							$('#view_sobre h2').append(inicial);
+							$('#view_sobre h3').append(apresentacao);
+							$('#view_sobre .challenger').append("<a class='btn btn-lg btn-warning'>" + desafio + "</a>");
+						});
+					});
+            },//success
+            error: function(XMLHttpRequest, textStatus, errorThrown){
+            	alert('Erro!');
+    		}//error
+    	});
+		}
 	</script>
 </body>
 </html>
