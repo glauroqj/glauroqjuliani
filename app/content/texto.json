@@ -1,26 +1,9 @@
-[
-	{
-		"id": 12,
-		"nome": "Ted",
-		"telefone": "(99) 9999-9999",
-		"cidade": "Salvador"
-	},
-	{
-		"id": 13,
-		"nome": "Clark",
-		"telefone": "(88) 8888-8888",
-		"cidade": "Madrid"
-	},
-	{
-		"id": 14,
-		"nome": "Nuno",
-		"telefone": "(77) 7777-7777",
-		"cidade": "Nova York"
-	},
-	{
-		"id": 15,
-		"nome": "Maia",
-		"telefone": "(66) 6666-6666",
-		"cidade": "Contagem"
-	}
-]
+{
+    "sobre": [
+        {
+            "h2": "Olá, menu nome é Glauro!",
+            "h3": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts para lojas virtuais (e-commerce), sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado!",
+            "desafio": "Tem algo novo para mim?"
+        }
+    ]
+}
