@@ -63,17 +63,13 @@
 				type: 'GET',
 				dataType: 'json',
 				success: function(json){
-					$.each(json, function(index, val) {
-						$(val).each(function(index, val) {
-							var inicial = (val.h2)
-							var apresentacao = (val.h3)
-							var desafio = (val.desafio)
-							
-							$('#view_sobre h2').append(inicial);
-							$('#view_sobre h3').append(apresentacao);
-							$('#view_sobre .challenger').append("<a class='btn btn-lg btn-warning'>" + desafio + "</a>");
-						});
-					});
+					var inicial = (json.sobre.h2)
+					var apresentacao = (json.sobre.h3)
+					var desafio = (json.sobre.desafio)
+
+					$('#view_sobre h2').append(inicial);
+					$('#view_sobre h3').append(apresentacao);
+					$('#view_sobre .challenger').append("<a class='btn btn-lg btn-warning'>" + desafio + "</a>");
             },//success
             error: function(XMLHttpRequest, textStatus, errorThrown){
             	alert('Erro!');

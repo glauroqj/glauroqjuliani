@@ -1,9 +1,12 @@
 {
-    "sobre": [
-        {
-            "h2": "Olá, menu nome é Glauro!",
-            "h3": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts para lojas virtuais (e-commerce), sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado!",
-            "desafio": "Tem algo novo para mim?"
-        }
-    ]
+	"sobre": 
+	{
+		"h2": "Olá, menu nome é Glauro!",
+		"h3": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts para lojas virtuais (e-commerce), sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado! Tem algum desafio para mim?",
+		"desafio": "Tenho Um Desafio!"
+	},
+	"ensino":
+	{
+
+	}
 }
