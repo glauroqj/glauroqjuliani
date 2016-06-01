@@ -1,12 +1,75 @@
 {
 	"sobre": 
 	{
-		"h2": "Olá, menu nome é Glauro!",
-		"h3": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts para lojas virtuais (e-commerce), sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado! Tem algum desafio para mim?",
-		"desafio": "Tenho Um Desafio!"
+		"ola": "Olá, menu nome é Glauro!",
+		"apresenta": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts, com o maior foco em lojas virtuais (e-commerce), também sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado! Tem algum desafio para mim?",
+		"desafio": "Tenho Um Desafio!",
+		"trabalho": 
+		[
+			{
+				"funcao": "Front-End Developer",
+				"empresa": "Isobar",
+				"descricao": "Desenvolvimento e manutenção nos projetos e produtos da empresa.",
+				"tempo": "Maio 2016 - Atual"
+			},
+			{
+				"funcao": "Web Designer",
+				"empresa": "iSET - Internet Soluções e Tecnologia",
+				"descricao": "Desenvolvimento e personalização de lojas virtuais, ramo no qual a empresa tem o maior foco.",
+				"tempo": "Agosto 2013 - Maio 2016"
+			},
+			{
+				"funcao": "Front-End Developer - Freelancer",
+				"empresa": "---",
+				"descricao": "Desenvolvimento e criação de layouts.",
+				"tempo": "<i class='fa fa-clock-o' aria-hidden='true'></i>"
+			}
+		]
 	},
 	"ensino":
 	{
-
+		"curso": "Análise e Desenvolvimento de Sistemas",
+		"instituicao": "Centro Universitário Una",
+		"duracao": "3 anos",
+		"status": "Graduado",
+		"data_conclusao": "Dezembro de 2015",
+		"premiacao": {
+			"titulo": "Melhor Projeto Aplicado do Curso de Análise e Desenvolvimento de Sistemas do Barro Preto de 2014-2",
+			"nome_projeto": "C.A.S - Automação Residencial",
+			"texto_doc": "O principal objetivo do sistema é permitir que o usuário controle remotamente os dispositivos instalados em sua residência, proporcionando a ele segurança e comodidade, além da possibilidade de controlar e reduzir os gastos e o impacto ambiental causado pelo seu imóvel.",
+			"doc": "Documentação",
+			"doc_link": "https://drive.google.com/open?id=0B3vC_2Ww5VNzbUVzV3RtUk5XZ1k",
+			"data": "2014-2"
+		}
+	},
+	"portfolio":
+	{
+		"skills":
+		{
+			"html5": "width: 90%",
+			"css3": "width: 90%",
+			"bootstrap": "width: 95%",
+			"jquery": "width: 85%",
+			"less": "ok",
+			"git": "ok",
+			"node": "ok"
+		},
+		"ecommerce":
+		[
+			{
+				"nome_loja": "Coronitas Acessórios",
+				"ramo": "Acessórios para celular | Capas para celular",
+				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/coronitas_atual.png",
+				"loja_link": "http://www.coronitasacessorios.com.br/",
+				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
+			},
+			{
+				"nome_loja": "Coronitas Acessórios",
+				"ramo": "Acessórios para celular | Capas para celular",
+				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/coronitas_atual.png",
+				"loja_link": "http://www.coronitasacessorios.com.br/",
+				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Criação"
+			}
+		]
 	}
 }

@@ -51,10 +51,27 @@ body {
 			z-index: 9;
 			.navbar-header {
 				button {
+					outline: none;
+					background-color: #323232;
 					i {
-						background-color: #ffffff;
+						color: #f9f9f9;
 						font-size: 1.2em;
 					}
+					&:hover {
+					}
+					&:active {
+					}
+					&:focus {
+						background-color: #080808;
+						i {
+							color: #f9f9f9;
+						}
+					}
+				}
+				.navbar-toggle {
+					margin-top: 0px;
+					margin-bottom: 0px;
+					top: 6px;
 				}
 			}
 			a {
@@ -72,18 +89,40 @@ body {
 				-ms-transition: all 0.3s ease-in-out 0s;
 			}
 			.nav {
-				a:focus {
-					color: @color-base;
-					background-color: #ffffff;
-					font-weight: bold;
+				li {
+					&:hover {
+						cursor: pointer;
+					}
 				}
-				a:hover {
-					background-color: #ffffff;
-					color: #2f2f2f;
+				.active {
+					a {
+						color: #272727;
+						background-color: #ffffff;
+						font-weight: bold;
+						&:focus {
+							color: #272727;
+							background-color: #ffffff;
+							font-weight: bold;
+						}
+						&:active {
+
+						}
+						&:hover {
+							color: @color-base;
+							background-color: #ffffff;
+							font-weight: bold;
+						}
+					}
 				}
 			}
-		}
+		}//navbar
 	}//header
+
+	.titulo {
+		border-bottom: 1px solid #eee;
+		h1 {
+		}
+	}
 
 	.btn {
 		border-width: 0 1px 4px 1px;
