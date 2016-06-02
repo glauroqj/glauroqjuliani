@@ -22,7 +22,7 @@
 					<button type="button" class="navbar-toggle collapsed">
 						<i class="fa fa-bars" aria-hidden="true"></i>
 					</button>
-					<a class="navbar-brand logo" href="#/sobre">
+					<a id="sobre" ng-class="{active: aba == '/'}" class="navbar-brand logo" href="#/sobre">
 						<h1>
 							<span>Glauro Quintão Juliani - Front End Developer</span>
 							<img src="app/images/sheep-48.png" alt="logo julianiwebdesigner" title="Glauro Quintão Juliani">
@@ -55,37 +55,7 @@
 	<script src="app/js/controllers/controllers.js"></script>
 
 	<script>
-		function listar_sobre(){
-			$('.overlay').show();
-			$.ajax({
-				url: 'http://glauroqjuliani.com.br/new/glauroqjuliani/app/content/texto.json',
-				type: 'GET',
-				dataType: 'json',
-				success: function(json){
-					var ola = (json.sobre.ola)
-					var apresentacao = (json.sobre.apresenta)
-					var desafio = (json.sobre.desafio)
 
-					$('#view_sobre .ola').append(ola);
-					$('#view_sobre .apresentacao').append(apresentacao);
-					$('#view_sobre .challenger').append("<a id='contato' ng-class='{active: aba == '/contato'}' class='btn btn-lg btn-warning' href='#/contato'><i class='fa fa-hourglass-start' aria-hidden='true'></i> " + desafio + "</a>");
-
-					$.each(json.sobre.trabalho, function(index, val) {
-							var funcao = (val.funcao)
-							var empresa = (val.empresa)
-							var descricao = (val.descricao)
-							var tempo = (val.tempo)
-
-							$('#view_sobre .job').append("<div class='col-sm-12 col-md-4 col-lg-4'><div class='box'><ul class='list-unstyled'><li>"+ funcao +"</li><li>"+ empresa +"</li> <li>"+ descricao +"</li><li>"+ tempo +"</li></ul></div></div>");
-
-					});
-
-            },//success
-            error: function(XMLHttpRequest, textStatus, errorThrown){
-            	alert('Erro!');
-    		}//error
-    	});
-		}
 	</script>
 </body>
 </html>
