@@ -38,7 +38,8 @@
 			"nome_projeto": "<i class='fa fa-home' aria-hidden='true'></i> C.A.S - Automação Residencial",
 			"texto_doc": "<i class='fa fa-comment' aria-hidden='true'></i> O principal objetivo do sistema é permitir que o usuário controle remotamente os dispositivos instalados em sua residência, proporcionando a ele segurança e comodidade, além da possibilidade de controlar e reduzir os gastos e o impacto ambiental causado pelo seu imóvel.",
 			"doc_link": "https://drive.google.com/open?id=0B3vC_2Ww5VNzbUVzV3RtUk5XZ1k",
-			"data": "<i class='fa fa-calendar' aria-hidden='true'></i> 2014-2"
+			"data": "<i class='fa fa-calendar' aria-hidden='true'></i> 2014-2",
+			"imagem_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/grupo-cas-una.jpg"
 		}
 	},
 	"portfolio":
