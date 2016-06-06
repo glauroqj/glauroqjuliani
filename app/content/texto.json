@@ -46,13 +46,14 @@
 	{
 		"skills":
 		{
-			"html5": "width: 90%",
-			"css3": "width: 90%",
+			"html5": "width: 95%",
+			"css3": "width: 95%",
 			"bootstrap": "width: 95%",
-			"jquery": "width: 85%",
-			"less": "ok",
-			"git": "ok",
-			"node": "ok"
+			"jquery": "width: 90%",
+			"less": "<i class='fa fa-check-square' aria-hidden='true'></i>",
+			"sass": "<i class='fa fa-check-square' aria-hidden='true'></i>",
+			"git": "<i class='fa fa-check-square' aria-hidden='true'></i>",
+			"node": "<i class='fa fa-check-square' aria-hidden='true'></i>"
 		},
 		"ecommerce":
 		[
@@ -64,11 +65,25 @@
 				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
 			},
 			{
+				"nome_loja": "MMA Shop",
+				"ramo": "Artigos Esportivos",
+				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/mmashop.png",
+				"loja_link": "http://www.mmashop.com.br/",
+				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Desenvolvimento"
+			},
+			{
 				"nome_loja": "Coronitas Acessórios",
 				"ramo": "Acessórios para celular | Capas para celular",
 				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/coronitas_atual.png",
 				"loja_link": "http://www.coronitasacessorios.com.br/",
-				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Criação"
+				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
+			},
+			{
+				"nome_loja": "MMA Shop",
+				"ramo": "Artigos Esportivos",
+				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/mmashop.png",
+				"loja_link": "http://www.mmashop.com.br/",
+				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Desenvolvimento"
 			}
 		]
 	}

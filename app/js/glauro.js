@@ -14,7 +14,7 @@ $(document).ready(function() {
 		$('.overlay').show();
 		setTimeout(function(){
 			listar_sobre();
-		}, 450);
+		}, 500);
 	});
 
 
@@ -23,13 +23,16 @@ $(document).ready(function() {
 		$('.ensino div, .premiacao div').remove();
 		setTimeout(function(){
 			listar_ensino();
-		}, 450);
+		}, 500);
 	});
 	$('.navbar').on('click', '#portfolio', function(event) {
+		$('.box .progress div').attr('style', 'width: 0');
+		$('.ferramentas .box li div i').remove();
+		$('.portfolio div').remove();
 		$('.overlay').show();
 		setTimeout(function(){
 			listar_portfolio();
-		}, 450);
+		}, 500);
 	});
 
 	$( document ).ajaxComplete(function() {
@@ -111,6 +114,7 @@ function listar_portfolio(){
 			var bootstrap = (json.portfolio.skills.bootstrap)
 			var jquery = (json.portfolio.skills.jquery)
 			var less = (json.portfolio.skills.less)
+			var sass = (json.portfolio.skills.sass)
 			var git = (json.portfolio.skills.git)
 			var node = (json.portfolio.skills.node)
 
@@ -118,6 +122,21 @@ function listar_portfolio(){
 			$('#view_portfolio .skills .css div').attr('style', css3);
 			$('#view_portfolio .skills .bootstrap div').attr('style', bootstrap);
 			$('#view_portfolio .skills .jquery div').attr('style', jquery);
+
+			$('#view_portfolio .ferramentas .git').append(git);
+			$('#view_portfolio .ferramentas .less').append(less);
+			$('#view_portfolio .ferramentas .sass').append(sass);
+			$('#view_portfolio .ferramentas .node').append(node);
+
+			$.each(json.portfolio.ecommerce ,function(index, val) {
+				var nome_loja = (val.nome_loja);
+				var ramo = (val.ramo);
+				var foto_url = (val.foto_url);
+				var loja_link = (val.loja_link);
+				var ticket_info = (val.ticket_info);
+
+				$('#view_portfolio .portfolio').append("<div class='col-sm-12 col-md-6 col-lg-6 animated fadeInUp'><div class='box'><div class='loja_titulo'>"+ nome_loja +"</div><div class='ramo'>"+ ramo +"</div><div class='info'><b>"+ ticket_info +"</b></div><div class='acessar_loja'><a target='new' class='btn btn-sm btn-success' href="+ loja_link +" >Acessar a loja "+ nome_loja +"</a></div><div class='foto'><img class='img-responsive' src="+ foto_url +" alt="+ nome_loja +" title="+ nome_loja +"></div></div></div>")
+			});
 
             },//success
             error: function(XMLHttpRequest, textStatus, errorThrown){
