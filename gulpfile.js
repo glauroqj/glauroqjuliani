@@ -1,5 +1,3 @@
-//Faz um require dos módulos instalados anteriormente.
-
 var gulp = require ('gulp');
 less = require('gulp-less');
 plumber = require('gulp-plumber');
@@ -7,8 +5,8 @@ mincss = require('gulp-minify-css');
 rename = require('gulp-rename');
 jshint = require('gulp-jshint');
 uglify = require('gulp-uglify');
-
-// Utiliza o 'gulp-less', busca tudo que está dentro da pasta less, compila e devolve na pasta 'css', o gulp.src é o caminho do less e o gulp.dest de saída do css.
+browserSync = require('browser-sync');
+reload = browserSync.reload;
 
 gulp.task('less', function () {
   gulp.src('app/less/templates.less')
@@ -32,11 +30,18 @@ gulp.task('uglify', function () {
   .pipe(gulp.dest('app/all'))
 });
 
-// Aqui a task watch fica observando por mudanças na pasta less, ou seja, toda vez que você salva algo no less ele já compila em css :)
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+      baseDir: './'
+    }
+  });
+});
 
 gulp.task('watch', function(){
   gulp.watch('app/less/*.less', ['less']);
   gulp.watch('app/js/glauro.js', ['uglify']);
+  gulp.watch(['views/*.html', 'less/**/*.less', 'js/**/*.js'], {cwd: 'app'}, reload);
 });
 
-gulp.task('default',  ['less', 'uglify', 'watch']);
+gulp.task('default',  ['less', 'uglify', 'serve', 'watch']);
