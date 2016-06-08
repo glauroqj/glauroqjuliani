@@ -1,43 +1,43 @@
 $(document).ready(function() {	
-	listar_sobre();
-	listar_ensino();
-	listar_portfolio();
+	// listar_sobre();
+	// listar_ensino();
+	// listar_portfolio();
 
-	$('.navbar-header button').click(function(event) {
-		$('#menu_glauro').slideToggle(150);
-		$('.nav li').click(function(event) {
-			$('#menu_glauro').slideUp(150);
-		});
-	});
+	// $('.navbar-header button').click(function(event) {
+	// 	$('#menu_glauro').slideToggle(150);
+	// 	$('.nav li').click(function(event) {
+	// 		$('#menu_glauro').slideUp(150);
+	// 	});
+	// });
 
-	$('.navbar').on('click', '.logo, #sobre', function(event) {
-		$('.overlay').show();
-		setTimeout(function(){
-			listar_sobre();
-		}, 500);
-	});
+	// $('.navbar').on('click', '.logo, #sobre', function(event) {
+	// 	$('.overlay').show();
+	// 	setTimeout(function(){
+	// 		listar_sobre();
+	// 	}, 500);
+	// });
 
 
-	$('.navbar').on('click', '#ensino', function(event) {
-		$('.overlay').show();
-		$('.ensino div, .premiacao div').remove();
-		setTimeout(function(){
-			listar_ensino();
-		}, 500);
-	});
-	$('.navbar').on('click', '#portfolio', function(event) {
-		$('.box .progress div').attr('style', 'width: 0');
-		$('.ferramentas .box li div i').remove();
-		$('.portfolio div').remove();
-		$('.overlay').show();
-		setTimeout(function(){
-			listar_portfolio();
-		}, 500);
-	});
+	// $('.navbar').on('click', '#ensino', function(event) {
+	// 	$('.overlay').show();
+	// 	$('.ensino div, .premiacao div').remove();
+	// 	setTimeout(function(){
+	// 		listar_ensino();
+	// 	}, 500);
+	// });
+	// $('.navbar').on('click', '#portfolio', function(event) {
+	// 	$('.box .progress div').attr('style', 'width: 0');
+	// 	$('.ferramentas .box li div i').remove();
+	// 	$('.portfolio div').remove();
+	// 	$('.overlay').show();
+	// 	setTimeout(function(){
+	// 		listar_portfolio();
+	// 	}, 500);
+	// });
 
-	$( document ).ajaxComplete(function() {
-		$('.overlay').hide();
-	});
+	// $( document ).ajaxComplete(function() {
+	// 	$('.overlay').hide();
+	// });
 });//end document
 
 //calls ajax
