@@ -52,7 +52,7 @@ function listar_sobre(){
 			var desafio = (json.sobre.desafio)
 
 			$('#view_sobre .ola').append("<h2 class='animated fadeIn'>"+ ola +"</h2>");
-			$('#view_sobre .apresentacao').append("<h3 class='animated fadeIn'>"+ apresentacao +"</h3><div class='challenger text-center'><a id='contato' ng-class='{active: aba == '/contato'}' class='btn btn-lg btn-warning' href='#/contato'><i class='fa fa-hourglass-start' aria-hidden='true'></i> " + desafio + "</a></div>");
+			$('#view_sobre .apresentacao').append("<h3 class='animated fadeIn'>"+ apresentacao +"</h3><div class='challenger text-center'><a id='contato' ng-class='{active: aba == '/contato'}' class='btn btn-lg btn-challenger' href='#/contato'><i class='fa fa-hourglass-start' aria-hidden='true'></i> " + desafio + "</a></div>");
 
 			$.each(json.sobre.trabalho, function(index, val) {
 				var funcao = (val.funcao)
@@ -135,7 +135,7 @@ function listar_portfolio(){
 				var loja_link = (val.loja_link);
 				var ticket_info = (val.ticket_info);
 
-				$('#view_portfolio .portfolio').append("<div class='col-sm-12 col-md-6 col-lg-6 animated fadeInUp'><div class='box'><div class='loja_titulo'>"+ nome_loja +"</div><div class='ramo'>"+ ramo +"</div><div class='info'><b>"+ ticket_info +"</b></div><div class='acessar_loja'><a target='new' class='btn btn-sm btn-success' href="+ loja_link +" >Acessar a loja "+ nome_loja +"</a></div><div class='foto'><img class='img-responsive' src="+ foto_url +" alt="+ nome_loja +" title="+ nome_loja +"></div></div></div>")
+				$('#view_portfolio .portfolio').append("<div class='col-sm-12 col-md-6 col-lg-6 animated fadeInUp text-center'><div class='box'><div class='loja_titulo'>"+ nome_loja +"</div><div class='ramo'>"+ ramo +"</div><div class='info'><b>"+ ticket_info +"</b></div><div class='foto'><img class='img-responsive' src="+ foto_url +" alt="+ nome_loja +" title="+ nome_loja +"><div class='acessar_loja'><a target='new' class='btn btn-sm btn-okay' href="+ loja_link +" >Acessar a loja "+ nome_loja +"</a></div></div></div></div>")
 			});
 
             },//success

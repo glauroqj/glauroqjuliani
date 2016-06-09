@@ -41,7 +41,7 @@ gulp.task('serve', function() {
 gulp.task('watch', function(){
   gulp.watch('app/less/*.less', ['less']);
   gulp.watch('app/js/glauro.js', ['uglify']);
-  gulp.watch(['views/*.html', 'less/**/*.less', 'js/**/*.js'], {cwd: 'app'}, reload);
+  gulp.watch(['views/*.html', '../*.html', 'less/**/*.less', 'js/**/*.js'], {cwd: 'app'}, reload);
 });
 
 gulp.task('default',  ['less', 'uglify', 'serve', 'watch']);

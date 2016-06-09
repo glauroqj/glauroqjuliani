@@ -7,6 +7,8 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	padding-top: 50px;
 	position: relative;
+	background-color: #f2f2f2;
+	color: #666666;
 	transition: all 0.3s ease-in-out 0s;
 	-moz-transition: all 0.3s ease-in-out 0s;
 	-webkit-transition: all 0.3s ease-in-out 0s;
@@ -23,6 +25,10 @@ body {
 			text-decoration: none;
 			color: @color-base;
 		}
+	}
+	::selection {
+		color: #ffffff;
+		background: #D64541;
 	}
 	.overlay {
 		position: absolute;
@@ -109,11 +115,11 @@ body {
 				.active {
 					a {
 						color: #272727;
-						background-color: #ffffff;
+						background-color: #f2f2f2;
 						font-weight: bold;
 						&:focus {
 							color: #272727;
-							background-color: #ffffff;
+							background-color: #f2f2f2;
 							font-weight: bold;
 						}
 						&:active {
@@ -121,7 +127,7 @@ body {
 						}
 						&:hover {
 							color: @color-base;
-							background-color: #ffffff;
+							background-color: #f2f2f2;
 							font-weight: bold;
 						}
 					}
@@ -131,7 +137,8 @@ body {
 	}//header
 
 	.titulo {
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #cecece;
+		color: #2A2A2A;
 		h1 {
 		}
 	}
@@ -158,6 +165,7 @@ body {
 	.btn {
 		border-width: 0 1px 4px 1px;
 		padding: 9px 12px 7px;
+		transition: none;
 		&:hover {
 			margin-top: 1px;
 			border-bottom-width: 3px;
@@ -167,6 +175,30 @@ body {
 			border-bottom-width: 2px;
 			-webkit-box-shadow: none;
 			box-shadow: none;
+		}
+	}
+	.btn-okay {
+		background-color: #2ECC71;
+		border-color: #208C4E;
+		color: #ffffff;
+		&:hover {
+			color: #ffffff;
+		}
+		&:active, &:focus {
+			color: #ffffff;
+			outline: none;
+		}
+	}
+	.btn-challenger {
+		background-color: #D64541;
+		border-color: #96302E;
+		color: #ffffff;
+		&:hover {
+			color: #ffffff;
+		}
+		&:active, &:focus {
+			color: #ffffff;
+			outline: none;
 		}
 	}
 }//body

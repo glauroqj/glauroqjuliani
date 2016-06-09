@@ -1,8 +1,8 @@
 {
 	"sobre": 
 	{
-		"ola": "Olá, meu nome é Glauro!",
-		"apresenta": "Sou front-end developer há 4 anos, com boa experiência em criação de layouts e foco em lojas virtuais (e-commerce), também sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado! Tem algum desafio para mim?",
+		"ola": "Olá, meu nome é <b>Glauro!</b>",
+		"apresenta": "Sou front-end developer há 4 anos, com boa experiência em criação de layout e foco em lojas virtuais (e-commerce), também sites responsivos e afins!! Estou sempre pronto para novos desafios e aprendizado! Tem algum desafio para mim?",
 		"desafio": "Tenho Um Desafio!",
 		"trabalho": 
 		[
@@ -60,30 +60,37 @@
 			{
 				"nome_loja": "Coronitas Acessórios",
 				"ramo": "Acessórios para celular | Capas para celular",
-				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/coronitas_atual.png",
+				"foto_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/loja_coronitas.png",
 				"loja_link": "http://www.coronitasacessorios.com.br/",
+				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
+			},
+			{
+				"nome_loja": "Espartanos",
+				"ramo": "Artigos Esportivos",
+				"foto_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/loja_espartanos.png",
+				"loja_link": "http://www.espartanos.com.br/",
+				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
+			},
+			{
+				"nome_loja": "Distribuidora Sex Shop",
+				"ramo": "Artigos Eróticos",
+				"foto_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/loja_dss.png",
+				"loja_link": "http://www.distribuidorasexshop.com.br/",
 				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
 			},
 			{
 				"nome_loja": "MMA Shop",
 				"ramo": "Artigos Esportivos",
-				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/mmashop.png",
+				"foto_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/loja_mmashop.png",
 				"loja_link": "http://www.mmashop.com.br/",
 				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Desenvolvimento"
 			},
 			{
-				"nome_loja": "Coronitas Acessórios",
-				"ramo": "Acessórios para celular | Capas para celular",
-				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/coronitas_atual.png",
-				"loja_link": "http://www.coronitasacessorios.com.br/",
+				"nome_loja": "ITX Tecnologia",
+				"ramo": "Tecnologia | Gammer's",
+				"foto_url": "http://glauroqjuliani.com.br/new/glauroqjuliani/app/images/loja_itx.png",
+				"loja_link": "http://www.itxtecnologia.com.br/",
 				"ticket_info": "<i class='fa fa-tags' aria-hidden='true'></i> Criação | Desenvolvimento"
-			},
-			{
-				"nome_loja": "MMA Shop",
-				"ramo": "Artigos Esportivos",
-				"foto_url": "http://glauroqjuliani.com.br/assets/img/galeria/mmashop.png",
-				"loja_link": "http://www.mmashop.com.br/",
-				"ticket_info": "<i class='fa fa-tag' aria-hidden='true'></i> Desenvolvimento"
 			}
 		]
 	}
