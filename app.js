@@ -7,19 +7,19 @@ app.config(function($routeProvider, $locationProvider)
 
    $routeProvider
 
-   // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
+   // para a rota '/', carregaremos o template home.html e o controller 'SobreCtrl'
    .when('/', {
       templateUrl : 'app/views/sobre.html',
       controller     : 'SobreCtrl',
    })
 
-   // para a rota '/sobre', carregaremos o template sobre.html e o controller 'SobreCtrl'
+   // para a rota '/ensino', carregaremos o template sobre.html e o controller 'EnsinoCtrl'
    .when('/ensino', {
       templateUrl : 'app/views/ensino.html',
       controller  : 'EnsinoCtrl',
    })
 
-   // para a rota '/contato', carregaremos o template contato.html e o controller 'ContatoCtrl'
+   // para a rota '/portfolio', carregaremos o template contato.html e o controller 'PortfolioCtrl'
    .when('/portfolio', {
       templateUrl : 'app/views/portfolio.html',
       controller  : 'PortfolioCtrl',
