@@ -1,62 +1,410 @@
-<!doctype html>
-<html ng-app="app">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+	<title>Glauro Quintão Juliani - Front End Developer</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="content-language" content="pt-br" />
-	<title>G.Q.J - </title>
-	<link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="app/all/normalize.css">
-	<link rel="stylesheet" href="app/all/bootstrap.min.css"/>
-	<link rel="stylesheet" href="app/all/animate.css">
+	<meta name="author" content="Glauro Quintão Juliani">
+	<meta name="description" content=" Glauro Quintão Juliani - Front End: desenvolvimento de sites & e-commerce">
+	<meta name="keywords" content="front end, web designer, ecommerce, desenvolvedor front end, portfolio">
+	<link rel="shortcut icon" href="app/dist/images/favicon.png">
+
+	<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+	<link rel="stylesheet" href="app/dist/css/main.min.css">
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="app/all/main.min.css">
-</head>
 
-<body>
-	<div class="overlay"><div class="loading">Carregando...</div></div> <!-- overlay -->
-	<header>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed">
-						<i class="fa fa-bars" aria-hidden="true"></i>
-					</button>
-					<a id="sobre" ng-class="{active: aba == '/'}" class="navbar-brand logo" href="#/sobre">
-						<h1>
-							<span>Glauro Quintão Juliani - Front End Developer</span>
-							<img src="app/images/sheep-48.png" alt="logo julianiwebdesigner" title="Glauro Quintão Juliani">
-						</h1>
-					</a>
-				</div>
+	<!-- Google Analytics -->
+	<script async>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-				<div id="menu_glauro" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li id="sobre" ng-class="{active: aba == '/'}"><a href="#/sobre">Sobre</a></li>
-						<li id="ensino" ng-class="{active: aba == '/ensino'}"><a href="#/ensino">Ensino</a></li>
-						<li id="portfolio" ng-class="{active: aba == '/portfolio'}"><a href="#/portfolio">Portfolio</a></li>
-						<li id="contato" ng-class="{active: aba == '/contato'}"><a href="#/contato">Contato</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</header><!-- /header -->
-
-
-	<div ng-view></div>	
-
-	<script src="app/libs/jquery-2.1.3.min.js"></script>
-	<script src="app/libs/angular.min.js"></script>
-	<script src="app/libs/angular-route.min.js"></script>
-	<script type="app/all/bootstrap.min.js"></script>
-	<script src="app/all/main.min.js"></script>
-
-	<script src="app.js"></script>
-	<script src="app/js/controllers/controllers.js"></script>
-
-	<script>
+		ga('create', 'UA-58722243-1', 'auto');
+		ga('send', 'pageview');
 
 	</script>
+</head>
+
+<body id="home" data-spy="scroll" data-offset="50" data-target="#navbar-topo">
+
+	<header>
+		<nav id="navbar-topo" class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-topo" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="http://glauroqjuliani.com.br/">
+							<h1 class="animated slideInDown">
+								<span>Glauro Quintão Juliani - Front End Developer</span>
+								<img class="img-responsive" src="app/dist/images/logo.png" data-toggle="tooltip" data-placement="bottom" title="Juliani Web Designer">
+							</h1>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="menu-topo">
+						<ul class="nav navbar-nav navbar-right animated slideInDown">
+							<li><a href="#sobre" data-toggle="collapse" data-target=".navbar-collapse.collapse.in">Sobre</a></li>
+							<li><a href="#ensino" data-toggle="collapse" data-target=".navbar-collapse.collapse.in">Ensino</a></li>
+							<li><a href="#skills" data-toggle="collapse" data-target=".navbar-collapse.collapse.in">Skills</a></li>
+							<li><a href="#portfolio" data-toggle="collapse" data-target=".navbar-collapse.collapse.in">Portfolio</a></li>
+							<li><a href="#contato" data-toggle="collapse" data-target=".navbar-collapse.collapse.in">Contato</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section id="apresentacao">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="titulo-topo">
+						<h1>Glauro Q. Juliani -  Front End Developer</h1>
+						<h2>Profissional focado e dedicado, estou sempre pronto para novos desafios e aprendizado.</h2>
+
+						<div class="btn-desafio">
+							<a href="#contato" class="btn btn-lg btn-layout">tenho um desafio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<main>
+		<section id="sobre">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="titulo-info">
+							<h3>sobre</h3>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="texto-info">
+							<h4>Sou desenvolvedor front-end a mais de 4 anos, formado em análise e desenvolvimento de sistemas. Atualmente trabalho com foco em sites/hotsites, lojas virtuais (e-commerce), sistemas e app's.</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="ensino">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="titulo-info">
+							<h3>ensino</h3>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="texto-info">
+							<div class="row">
+								<div class="col-sm-8 col-md-8">
+									<h4>
+										<p>
+											<b><i class="fa fa-graduation-cap" aria-hidden="true"></i> Análise e Desenvolvimento de Sistemas</b>
+										</p>
+										<p>
+											<i class="fa fa-university" aria-hidden="true"></i> Centro Universitário Una 
+										</p>
+										<p>
+											<i class="fa fa-calendar" aria-hidden="true"></i> 3 anos
+										</p>
+									</h4>
+								</div>
+								<div class="col-sm-4 col-md-4">
+									<h4>
+										<p class="badge">Graduado em 2015</p>
+									</h4>
+								</div>
+							</div>
+							<hr>
+							<div class="row">
+								<div class="col-sm-8 col-md-8">
+									<h4>
+										<p>
+											<b><i class="fa fa-graduation-cap" aria-hidden="true"></i> Front-End Engineer</b>
+										</p>
+										<p>
+											<i class="fa fa-university" aria-hidden="true"></i> FUMEC
+										</p>
+										<p>
+											<i class="fa fa-calendar" aria-hidden="true"></i> 1 ano, 5 meses
+										</p>
+									</h4>
+								</div>
+								<div class="col-sm-4 col-md-4">
+									<h4>
+										<p class="badge">Pós-Graduação - Cursando</p>
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="skills">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="titulo-info">
+							<h3>skills</h3>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<h4>
+							<p>
+								<span>HTML 5</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped html active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									</div>
+								</div>
+							</p>
+							<p>
+								<span>CSS 3</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped css active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+									</div>
+								</div>
+							</p>
+							<p>
+								<span>JAVASCRIPT</span>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped js active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="85" style="width: 90%">
+									</div>
+								</div>
+							</p>
+						</h4>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="ferramentas">
+									<h5>Ferramentas / Frameworks</h5>
+									<ul class="list-inline">
+										<li>
+											<img src="app/dist/images/nodejs.png">
+											<div>Node.js</div>
+										</li>
+										<li>
+											<img src="app/dist/images/gulp.png">
+											<div>Gulp</div>
+										</li>
+										<li>
+											<img src="app/dist/images/less.png">
+											<div>Less</div>
+										</li>
+										<li>
+											<img src="app/dist/images/sass.png">
+											<div>Sass</div>
+										</li>
+										<li>
+											<img src="app/dist/images/bootstrap.png">
+											<div>Bootstrap</div>
+										</li>
+										<li>
+											<img src="app/dist/images/angularjs.png">
+											<div>Angular.js</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="titulo-info">
+							<h3>portfolio</h3>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="texto-info">
+							<div class="row">
+
+								<div class="col-sm-6 col-md-12">
+									<div class="loja-info">
+										<div class="thumbnail">
+											<h4>Coronitas Acessórios</h4>
+											<img class="img-responsive" src="app/dist/images/coronitas-acessorios.png" alt="Loja Coronitas Acessórios" title="Loja Coronitas Acessórios">
+											<div class="caption">
+												<p>Um dos clientes mais fiéis, fui responsável pelo desenvolvimento da loja, realizei a implementação da arte enviada, procurando sempre atrair o cliente com detalhes importantes.</p>
+												<p>
+													<i class="fa fa-tag"></i> criação/desenvolvimento
+												</p>
+												<p>
+													<a href="http://www.coronitasacessorios.com.br/" target="blank" class="btn btn-layout btn-md" role="button">Acessar Loja</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-12">
+									<div class="loja-info">
+										<div class="thumbnail">
+											<h4>Personal Shoes</h4>
+											<img class="img-responsive" src="app/dist/images/personal-shoes.png" alt="Loja Personal Shoes" title="Loja Personal Shoes">
+											<div class="caption">
+												<p>Responsável pela criação e desenvolvimento, loja resposniva, menu drop-down e exibição do carrinho / vitrine: banners e exibição de produtos clean / rodapé: formulário de newsletter, informações importantes e rede sociais.</p>
+												<p>
+													<i class="fa fa-tag"></i> criação/desenvolvimento
+												</p>
+												<p>
+													<a href="http://www.personalshoes.com.br/" target="blank" class="btn btn-layout btn-md" role="button">Acessar Loja</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div> <!-- row -->
+
+							<div class="row">
+								<div class="col-sm-6 col-md-12">
+									<div class="loja-info">
+										<div class="thumbnail">
+											<h4>MMA Shop</h4>
+											<img class="img-responsive" src="app/dist/images/mma-shop.png" alt="Loja MMA Shop" title="Loja MMA Shop">
+											<div class="caption">
+												<p>Fui responsável pela criação e desenvolvimento, loja resposniva, cabeçalho: com busca inteligente, cabecalho sticky, menu drop-down e exibição do carrinho / vitrine: banners e exibição de produtos clean / rodapé: formulário de newsletter, informações importantes e rede sociais.</p>
+												<p>
+													<i class="fa fa-tag"></i> criação/desenvolvimento
+												</p>
+												<p>
+													<a href="http://www.mmashop.com.br/" target="blank" class="btn btn-layout btn-md" role="button">Acessar Loja</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-sm-6 col-md-12">
+									<div class="loja-info">
+										<div class="thumbnail">
+											<h4>Loja Atrevida</h4>
+											<img class="img-responsive" src="app/dist/images/loja-atrevida.png" alt="Loja Atrevida - Sex Shop" title="Loja Atrevida - Sex Shop">
+											<div class="caption">
+												<p>Responsável pela criação e desenvolvimento, loja resposniva, menu drop-down e exibição do carrinho / vitrine: banners e exibição de produtos clean / rodapé: formulário de newsletter, informações importantes e rede sociais.</p>
+												<p>
+													<i class="fa fa-tag"></i> criação/desenvolvimento
+												</p>
+												<p>
+													<a href="http://www.lojaatrevida.com/" target="blank" class="btn btn-layout btn-md" role="button">Acessar Loja</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> <!-- row -->
+
+							<div class="row">
+								<div class="col-md-12">
+									<div class="portfolio-completo">
+										<a target="blank" href="/portfolio.html" class="btn btn-portfolio btn-lg btn-block">Portfolio Completo</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contato">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center">
+						<div class="titulo-info">
+							<h3>contato</h3>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="texto-info">
+							<div class="row">
+								<div class="col-md-12">
+									<h4>
+										<p>
+											<b>E-mail</b>
+											<div>julianiwebdesigner@gmail.com</div>
+										</p>
+									</h4>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<h4>
+										<p>
+											<b>Social</b>
+											<ul class="list-inline">
+												<li>
+													<a href="https://www.facebook.com/glauro.juliani" target="blank" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+														<i class="fa fa-lg fa-facebook" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="https://www.linkedin.com/in/glauro-juliani-9895949a" target="blank" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
+														<i class="fa fa-lg fa-linkedin" aria-hidden="true"></i>
+													</a>
+												</li>
+												<li>
+													<a href="https://github.com/glauroqj" target="blank" data-toggle="tooltip" data-placement="bottom" title="Github">
+														<i class="fa fa-lg fa-github" aria-hidden="true"></i>
+													</a>
+												</li>
+											</ul>
+										</p>
+									</h4>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-12">
+									<h4>
+										<p>
+											<b>Resumo</b>
+										</p>
+									</h4>
+									<h5>
+										<p>Mineiro, 24 anos, autodidata e esforçado, apaixonado pela área em que atua e que ama tentar criar coisas!!!</p>
+									</h5>
+									<div class="foto-perfil">
+										<img class="img-circle" src="app/dist/images/foto_perfil.jpg">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="desafio-contato">
+										<a target="blank" href="https://goo.gl/forms/5x4n1i5Pgaz1ogFw1" class="btn btn-layout btn-lg btn-block">Descrever Meu Desafio!</a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- texto-info -->
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script data-main="app/src/js/index" src="app/dist/libs/require.js"></script>
+
 </body>
 </html>

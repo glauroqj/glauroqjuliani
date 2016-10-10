@@ -1,47 +1,75 @@
-var gulp = require ('gulp');
-less = require('gulp-less');
-plumber = require('gulp-plumber');
-mincss = require('gulp-minify-css');
-rename = require('gulp-rename');
-jshint = require('gulp-jshint');
-uglify = require('gulp-uglify');
+var gulp = require('gulp'),
+less = require('gulp-less'),
+rename = require('gulp-rename'),
+imagemin = require('gulp-imagemin'),
+changed = require('gulp-changed'),
+uglify = require('gulp-uglify'),
+concat = require('gulp-concat'),
+plumber = require('gulp-plumber'),
+mincss = require('gulp-minify-css'),
 browserSync = require('browser-sync');
+mainBowerFiles = require('main-bower-files');
 reload = browserSync.reload;
 
+gulp.task('img-min', function() {
+	gulp.src('app/src/images/*')
+	.pipe(imagemin({
+		progressive: true
+	}))
+	.pipe(gulp.dest('app/dist/images'))
+});
+
 gulp.task('less', function () {
-  gulp.src('app/less/templates.less')
-  .pipe(plumber())
-  .pipe(less())
-  .pipe(mincss())
-  .pipe(rename({
-    suffix:'.min',
-    basename: 'main'
-  }))
-  .pipe(gulp.dest('app/all'))
+	return gulp.src([
+		'app/src/less/bootstrap.less',
+		'app/src/less/carousel.less',
+		'app/src/less/animate.less',
+		'app/src/less/template.less'
+		])
+	.pipe(concat('all.css'))
+	.pipe(plumber())
+	.pipe(less())
+	.pipe(mincss())
+	.pipe(rename({
+		suffix:'.min',
+		basename: 'main'
+	}))
+	.pipe(gulp.dest('app/dist/css'))
+	.pipe(browserSync.stream());
 });
 
 gulp.task('uglify', function () {
-  gulp.src('app/js/glauro.js')
-  .pipe(uglify())
-  .pipe(rename({
-    suffix:'.min',
-    basename: 'main'
-  }))
-  .pipe(gulp.dest('app/all'))
+	gulp.src([
+		'app/src/js/index.js'
+		])
+	.pipe(concat('all.js'))
+	.pipe(uglify())
+	.pipe(rename({
+		suffix:'.min',
+		basename: 'main'
+	}))
+	.pipe(gulp.dest('app/dist/js'))
+});
+
+/*
+gulp.task('main-bower', function() {
+	return gulp.src(mainBowerFiles('*.js'))
+	.pipe(gulp.dest('app/dist/libs'));
+});
+*/
+
+gulp.task('watch', function(){
+	gulp.watch('app/src/less/*.less', ['less']);
+	gulp.watch('app/src/js/*.js', ['uglify']);
+	gulp.watch(['../*.html', 'views/*.html', '../*.js', 'src/js/**/*.js'], {cwd: 'app'}, reload);
 });
 
 gulp.task('serve', function() {
-  browserSync({
-    server: {
-      baseDir: './'
-    }
-  });
+	browserSync({
+		server: {
+			baseDir: ['./views', './']
+		}
+	});
 });
 
-gulp.task('watch', function(){
-  gulp.watch('app/less/*.less', ['less']);
-  gulp.watch('app/js/glauro.js', ['uglify']);
-  gulp.watch(['views/*.html', 'less/**/*.less', 'js/**/*.js'], {cwd: 'app'}, reload);
-});
-
-gulp.task('default',  ['less', 'uglify', 'serve', 'watch']);
+gulp.task('default',  ['img-min', 'less', 'uglify', 'watch', 'serve']);

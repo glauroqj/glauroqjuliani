@@ -1,0 +1,287 @@
+#home {
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+
+	#apresentacao {
+		background-color: @principal-color;
+		color: #fff;
+		width: 100%;
+		position: fixed;
+		height: 600px;
+		box-shadow: inset 0px -10px 0px #4451AA;
+		.titulo-topo {
+			padding: 12em 0em 0em;
+			font-family: 'Varela Round', sans-serif;
+			h1 {
+				text-align: center;
+				font-size: 4.3em;
+				text-shadow: 3px 3px @principal-color-dark;
+			}
+			h2 {
+				text-align: center;
+				font-size: 1.4em;
+				margin-top: 2em;
+				text-shadow: 1px 1px @principal-color-dark;
+			}
+			.btn-desafio {
+				text-align: center;
+				margin-top: 2em;
+				text-transform: uppercase;
+				a {
+					font-size: 1em;
+				}
+			}//btn-desafio
+		}//titulo-topo
+	}//apresentacao
+
+	main {
+		section {
+			.titulo-info {
+				h3 {
+					border-bottom: 1px solid;
+					text-transform: uppercase;
+					font-weight: 300;
+				}
+			}//titulo-info
+			.texto-info {
+				h4 {
+					font-weight: 300;
+					line-height: 25px;
+					letter-spacing: 0.5px;
+					.badge {
+						background-color: @ensino-aprovado;
+						text-shadow: 0px 1px #000;
+					}//badge
+				}//h4
+
+				.loja-info {
+					margin-bottom: 25px;
+					.thumbnail {
+						padding: 20px;
+						h4 {
+							color: #323232;
+							font-weight: 400;
+						}
+						img {
+							width: 100%;
+							max-width: 250px;
+						}
+						.caption {
+							p {
+
+							}
+						}//caption
+					}//thumbnail
+				}//loja-info
+
+				.foto-perfil {
+					text-align: center;
+					margin: 15px auto;
+					img {
+						max-width: 30%;
+						height: auto;
+					}
+				}
+			}//texto-info
+
+			.progress {
+				.html {
+					background-color: #d35400;
+				}
+				.css {
+					background-color: #2980b9;
+				}
+				.js {
+					background-color: #F7CA18;
+				}
+			}//progress
+
+			.ferramentas {
+				h5 {
+
+				}
+				ul {
+					margin-bottom: 0px;
+					li {
+						text-align: center;
+						margin-bottom: 15px;
+						img {
+							height: auto;
+							max-width: 80px;
+							max-height: 80px;
+							margin-bottom: 5px;
+						}
+						div {
+							font-style: italic;
+							font-weight: 300;
+						}
+					}
+				}
+			}//ferramentas
+
+			.portfolio-completo {
+				margin-top: 15px;
+			}
+
+			.desafio-contato {
+				.portfolio-completo;
+			}//btn-desafio-contato
+
+		}//section
+	}
+
+	//media-queries
+	/* TABLET */
+	/* Portrait */
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: portrait)
+	and (-webkit-min-device-pixel-ratio: 2) {
+		#apresentacao {
+			.titulo-topo {
+				padding: 8em 0em 0em;
+				font-family: 'Varela Round', sans-serif;
+				h1 {
+					text-align: center;
+					font-size: 4.8em;
+					text-shadow: 3px 3px @principal-color-dark;
+				}
+				h2 {
+					text-align: center;
+					font-size: 1.4em;
+					margin-top: 2em;
+					text-shadow: 1px 1px @principal-color-dark;
+				}
+				.btn-desafio {
+					text-align: center;
+					margin-top: 3em;
+					text-transform: uppercase;
+					a {
+						font-size: 1.5em;
+					}
+				}//btn-desafio
+			}//titulo-topo
+		}//apresentacao
+
+		main {
+			section {
+				.titulo-info {
+					h3 {
+						border-bottom: 1px solid;
+						text-transform: uppercase;
+						font-weight: 300;
+					}
+			}//titulo-info
+			.texto-info {
+				h4 {
+					font-weight: 300;
+					line-height: 25px;
+					letter-spacing: 0.5px;
+				}//h4
+
+				.loja-info {
+					margin-bottom: 25px;
+					.thumbnail {
+						padding: 20px;
+						min-height: 480px;
+						h4 {
+							color: #323232;
+							font-weight: 400;
+						}
+						img {
+							width: 100%;
+							max-width: 250px;
+						}
+						.caption {
+							p {
+
+							}
+						}//caption
+					}//thumbnail
+				}//loja-info
+			}//texto-info
+			}//section
+		}//main
+
+	}//end
+	/* Landscape */
+	@media only screen
+	and (min-device-width: 768px)
+	and (max-device-width: 1024px)
+	and (orientation: landscape)
+	and (-webkit-min-device-pixel-ratio: 2) {
+		#apresentacao {
+			.titulo-topo {
+				padding: 8em 0em 0em;
+				font-family: 'Varela Round', sans-serif;
+				h1 {
+					text-align: center;
+					font-size: 4.5em;
+					text-shadow: 3px 3px @principal-color-dark;
+				}
+				h2 {
+					text-align: center;
+					font-size: 1.4em;
+					margin-top: 2em;
+					text-shadow: 1px 1px @principal-color-dark;
+				}
+				.btn-desafio {
+					text-align: center;
+					margin-top: 2em;
+					text-transform: uppercase;
+					a {
+						font-size: 1em;
+					}
+				}//btn-desafio
+			}//titulo-topo
+		}//apresentacao
+
+	}//end
+
+	/* MOBILE */
+	/* Portrait 320px */
+	@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 480px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: portrait) {
+		#apresentacao {
+			.titulo-topo {
+				padding: 6em 0em 0em;
+				font-family: 'Varela Round', sans-serif;
+				h1 {
+					text-align: center;
+					font-size: 2.4em;
+					text-shadow: 3px 3px @principal-color-dark;
+				}
+				h2 {
+					text-align: center;
+					font-size: 1.4em;
+					margin-top: 2em;
+					text-shadow: 1px 1px @principal-color-dark;
+				}
+				.btn-desafio {
+					text-align: center;
+					margin-top: 4em;
+					text-transform: uppercase;
+					a {
+						font-size: 1.8em;
+					}
+				}//btn-desafio
+			}//titulo-topo
+		}//apresentacao
+
+
+	}//end
+	/* Landscape 320px */
+	@media only screen 
+	and (min-device-width: 320px) 
+	and (max-device-width: 480px)
+	and (-webkit-min-device-pixel-ratio: 2)
+	and (orientation: landscape) {
+
+	}//end
+}//home

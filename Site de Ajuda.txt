@@ -1,5 +1,0 @@
-Site de Ajuda
-
-https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
-
-https://gist.github.com/nodesocket/c33362a8a2efabdbdf36
