@@ -29,8 +29,10 @@ class Home extends Component {
         <img src={this.props.user.avatar_url} />
         </div>
       }
+      <style jsx>{`
+      `}</style>
       </div>
-      );
+      )
     }
   }
   
