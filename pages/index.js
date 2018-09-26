@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 /* pages */
 import Home from './pages/Home'
+import Header from './components/Header'
 import './styles/main.scss'
 
 class App extends Component {
@@ -17,7 +18,10 @@ class App extends Component {
 
   render() {
     return (
-      <Home {...this.props}/>
+      <React.Fragment>
+        <Header />
+        <Home {...this.props}/>
+      </React.Fragment>
     )
   }
 }

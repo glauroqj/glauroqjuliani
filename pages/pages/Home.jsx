@@ -18,19 +18,20 @@ class Home extends Component {
   
   render() {
     return (
-      <div className="login container">
+      <div className="container">
       {this.state.loading &&
         <p>Carregando...</p>
       }
       {!this.state.loading &&
-        <div className="animated fadeIn">
-        <Header />
-        <h1>Glauro Quintão Juliani</h1>
-        <img src={this.props.user.avatar_url} />
+        <div className="animated fadeIn row">
+        <div className="col-sm-12">
+          <h1>Glauro Quintão Juliani</h1>
+          <img src={this.props.user.avatar_url} />
+          </div>
         </div>
       }
-      <style jsx>{`
-      `}</style>
+      {/* <style jsx>{`
+      `}</style> */}
       </div>
       )
     }

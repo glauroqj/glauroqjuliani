@@ -23,7 +23,6 @@ class About extends Component {
         }
         {!this.state.loading &&
           <div className="animated fadeIn">
-            <Header />
             <h1>About Me</h1>
           </div>
         }
