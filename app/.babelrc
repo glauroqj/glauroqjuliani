@@ -13,14 +13,17 @@
       "module-resolver", {
         "root": ["."],
         "alias": {
-          "styles": "./styles"
+          "styles": "./styles",
+          "components": "./components",
+          "pages": "./pages",
+          "build": "./build"
         },
         "cwd": "babelrc"
     }],
     [
-      "wrap-in-js",
+      "inline-import",
       {
-        "extensions": ["css$", "scss$"]
+        "extensions": [".css"]
       }
     ]
   ]

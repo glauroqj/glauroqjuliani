@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 /* pages */
-import About from './pages/About'
-import Header from './components/Header'
+import About from '../components/pages/About'
+import Header from '../components/Header'
+
+/* css */
+import '../styles/main.scss'
 
 class App extends Component {
   render() {

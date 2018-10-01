@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 /* pages */
-import Home from './pages/Home'
-import Header from './components/Header'
-// import mainCSS from '../styles/main.scss'
+import Home from '../components/pages/Home'
+import Header from '../components/Header'
+
+/* css */
+import '../styles/main.scss'
 
 class App extends Component {
   static getInitialProps = async () => {
