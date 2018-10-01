@@ -12,6 +12,9 @@
     "start": "NODE_ENV=production node server.js",
     "start-micro": "micro"
   },
+  "now": {
+    "alias": "glauroqj"
+  },
   "dependencies": {
     "autoprefixer": "^9.1.5",
     "babel-plugin-module-resolver": "^3.1.1",
@@ -23,7 +26,6 @@
     "isomorphic-unfetch": "^3.0.0",
     "micro": "^9.3.3",
     "next": "^7.0.0",
-    "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
