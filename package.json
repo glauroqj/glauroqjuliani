@@ -10,10 +10,8 @@
     "build": "cd app && next build",
     "export": "cd app next build && next export",
     "start": "NODE_ENV=production node server.js",
-    "start-micro": "micro"
-  },
-  "now": {
-    "alias": "glauroqj"
+    "alias": "now alias https://glauroquintaojuliani-tccdssuxlr.now.sh glauroqj",
+    "deploy": "now"
   },
   "dependencies": {
     "autoprefixer": "^9.1.5",
