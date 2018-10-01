@@ -25,7 +25,7 @@ class Home extends Component {
         <div className="animated fadeIn row">
         <div className="col-sm-12">
           <h1>Glauro Quintão Juliani</h1>
-          <img src={this.props.user.avatar_url} />
+          <img className="img-fluid" src={this.props.user.avatar_url} />
           </div>
         </div>
       }
