@@ -5,12 +5,16 @@
   "author": "Glauro Quintão Juliani",
   "license": "MIT",
   "main": "server.js",
+  "now": {
+    "alias": "glauroqj"
+  },
   "scripts": {
     "dev": "node server.js",
     "build": "cd app && next build",
     "export": "cd app next build && next export",
     "start": "NODE_ENV=production node server.js",
-    "deploy": "now alias https://glauroquintaojuliani-tccdssuxlr.now.sh glauroqj"
+    "deploy": "now",
+    "alias": "now alias KFH7fZOhrODIGJHJYLHhmxOr glauroqj"
   },
   "dependencies": {
     "autoprefixer": "^9.1.5",
